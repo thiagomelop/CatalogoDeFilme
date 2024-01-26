@@ -1,10 +1,11 @@
+import java.text.DecimalFormat;
 import java.util.Scanner;
 
 public class Desafio {
     public static void main(String[] args) {
 
 
-        String nomeCliente = "Thiago de Melo Pereira";
+        String nomeCliente = "José Augusto da Cunha";
         String tipoConta = "Conta Corrente";
         double saldo = 3200;
         int opcao = 0;
@@ -43,7 +44,7 @@ public class Desafio {
             opcao = leitura.nextInt();
 
             if (opcao == 1) {
-                System.out.println("Seu saldo é de " + saldo);
+                System.out.println("Seu saldo é de R$" + saldo);
             } else if (opcao == 2) {
                 System.out.println("Qual valor deseja transferir:");
                 double valorTransferido = leitura.nextDouble();
@@ -51,13 +52,13 @@ public class Desafio {
                     System.out.println("Não há saldo suficiente para realizar a transferência!");
                 } else{
                     saldo -= valorTransferido;
-                    System.out.println("Novo saldo " + saldo);
+                    System.out.println("Novo saldo R$" + saldo);
                 }
             } else if (opcao == 3){
                 System.out.println("Qual valor você esta recebendo:");
                 double valorRecebido = leitura.nextDouble();
                 saldo += valorRecebido;
-                System.out.println("Seu saldo atualizado é de " + saldo);
+                System.out.println("Seu saldo atualizado é de R$" + saldo);
             } else if (opcao == 4) {
                 System.out.println("Certeza que deseja sair da aplicação ?");
                 System.out.println("Digite 1 para SIM  e 2 para NÃO.");
